@@ -1,7 +1,4 @@
 <?php
 
-
-return [
-  '' => 'SiteController¯\_(๑❛ᴗ❛๑)_/¯home',
-  'about' => 'SiteController¯\_(๑❛ᴗ❛๑)_/¯about'
-];
+$router->get('', 'SiteController@home');
+$router->get('about', 'SiteController@about');
