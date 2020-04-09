@@ -1,15 +1,27 @@
 <?php
 
+/**
+ * Request Class
+ */
 class Request
 {
-  public static function getUri()
+  /**
+   * uri
+   *
+   * @return string
+   */
+  public static function uri(): string
   {
-    return trim($_SERVER['REQUEST_URI'],'/');
+    return trim($_SERVER['REQUEST_URI'], '/');
   }
 
-  public static function getClassAndMethod($routes)
+  /**
+   * method
+   *
+   * @return string
+   */
+  public static function method(): string
   {
-    return  explode('¯\_(๑❛ᴗ❛๑)_/¯' ,$routes[Request::getUri()]);
-  } 
-  
+    return  $_SERVER['REQUEST_METHOD'];
+  }
 }
