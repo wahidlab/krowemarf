@@ -2,6 +2,4 @@
 
 require 'core/Bootstrap.php';
 
- $router = Router::load('routes.php')->direct(Request::uri(), Request::method());
-
-
+$router = Router::load(__DIR__ . '/routes.php')->direct(Request::uri(), Request::method());

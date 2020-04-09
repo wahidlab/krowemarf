@@ -5,4 +5,3 @@ error_reporting(E_ALL);
 require 'Request.php';
 
 require 'Router.php';
-
