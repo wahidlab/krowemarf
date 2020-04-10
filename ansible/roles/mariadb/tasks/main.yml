@@ -1,0 +1,9 @@
+- name: Ensure mariadb server is install
+  package:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - mariadb-server
+  become: yes
+  tags: mariadb

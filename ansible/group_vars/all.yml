@@ -1,0 +1,5 @@
+MODE: development
+
+PROJECT_PATH: /var/www/krowemarf
+NGINX_PORT: 80
+PHP_VERSION: 7.4
