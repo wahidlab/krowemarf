@@ -1,0 +1,19 @@
+- name: Ensure Nginx is install
+  package:
+    name: nginx
+    state: present
+  become: yes
+
+- name: Configure Nginx
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/sites-available/default
+  become: yes
+
+- name: Start Nginx
+  service:
+    name: nginx
+    state: restarted
+    enabled: yes
+  become: yes
+
