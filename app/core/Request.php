@@ -1,5 +1,6 @@
 <?php
 
+namespace App\core;
 /**
  * Request Class
  */

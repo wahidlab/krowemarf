@@ -1,5 +1,6 @@
 <?php
 
+namespace App\controller;
 /**
  * SiteController
  */
@@ -12,7 +13,8 @@ class SiteController
    */
   public function home()
   {
-    require __DIR__ . '/../view/home.view.php';
+
+    require __DIR__ . '/../../view/home.view.php';
   }
   /**
    * about action
@@ -21,6 +23,7 @@ class SiteController
    */
   public function about()
   {
-    require __DIR__ . '/../view/about.view.php';
+    
+    require __DIR__ . '/../../view/about.view.php';
   }
 }
