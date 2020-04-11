@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   roles:
-    - {role: nginx}
-    - {role: php}
-    - {role: mariadb}
+    - nginx
+    - php
+    - composer
+    - mariadb

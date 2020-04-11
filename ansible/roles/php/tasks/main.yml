@@ -1,6 +1,7 @@
 - name: sudo apt-get update
   shell: apt update
   become: yes
+  tags: php
 
 - name: Ensure PHP requirement is install
   package:
@@ -13,20 +14,24 @@
       - ca-certificates
       - vim
   become: yes
+  tags: php
 
 - name: Ensure PHP repo added
   apt_key:
     url: https://packages.sury.org/php/apt.gpg
     state: present
   become: yes
+  tags: php
 
 - name: Adding PHP repository
   shell: echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
   become: yes
+  tags: php
 
 - name: sudo apt-get update
   shell: apt update
   become: yes
+  tags: php
 
 - name: Ensure PHP dependences are install
   package:
@@ -44,3 +49,4 @@
       - php{{ PHP_VERSION }}-zip
       - php{{ PHP_VERSION }}-fpm
   become: yes
+  tags: php

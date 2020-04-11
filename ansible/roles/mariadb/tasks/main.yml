@@ -1,8 +1,4 @@
-- name: sudo apt-get update
-  shell: apt update
-  become: yes
-
-- name: Ensure PHP and dependences are install
+- name: Ensure mariadb server is install
   package:
     name: "{{ packages }}"
     state: present
@@ -10,3 +6,4 @@
     packages:
       - mariadb-server
   become: yes
+  tags: mariadb
