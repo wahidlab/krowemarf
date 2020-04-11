@@ -11,3 +11,7 @@ ansible/playbook.retry
 
 # vendor
 vendor
+
+# floobits
+.floo
+.flooignore

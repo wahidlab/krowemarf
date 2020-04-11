@@ -1,29 +1,31 @@
 <?php
 
 namespace App\controller;
+
 /**
  * SiteController
  */
 class SiteController
 {
-  /**
-   * home action
-   *
-   * @return void
-   */
-  public function home()
-  {
+    const VIEW_PATH = __DIR__ . '/../../view/';
 
-    require __DIR__ . '/../../view/home.view.php';
-  }
-  /**
-   * about action
-   *
-   * @return void
-   */
-  public function about()
-  {
-    
-    require __DIR__ . '/../../view/about.view.php';
-  }
+    /**
+     * home action
+     *
+     * @return void
+     */
+    public function home()
+    {
+        require self::VIEW_PATH . 'home.view.php';
+    }
+
+    /**
+     * about action
+     *
+     * @return void
+     */
+    public function about()
+    {
+        require self::VIEW_PATH . 'about.view.php';
+    }
 }
