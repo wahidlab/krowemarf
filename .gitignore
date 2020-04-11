@@ -8,3 +8,6 @@
 
 # Ansible
 ansible/playbook.retry
+
+# vendor
+vendor

@@ -24,3 +24,7 @@
     mode: a+x
     state: file
   tags: composer
+
+- composer:
+    command: install
+    working_dir: "{{ PROJECT_PATH }}"
