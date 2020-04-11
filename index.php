@@ -1,13 +1,8 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-// require 'core/Bootstrap.php';
-
-require 'vendor/autoload.php';
+require 'Core/Bootstrap.php';
 
 
-use App\core\Request;
-use App\core\Router;
+use Core\Request;
+use Core\Router;
 
 $router = Router::load(__DIR__ . '/routes.php')->direct(Request::uri(), Request::method());
