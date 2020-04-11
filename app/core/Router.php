@@ -1,5 +1,6 @@
 <?php
 
+namespace App\core;
 /**
  * @author Amir Azizi <amir.azizi.dev@gmail.com>
  * 
@@ -108,8 +109,11 @@ class Router
    */
   public function action($controllerName, $actionName)
   {
-    require __DIR__ . '/../controller/' . $controllerName . '.php';
-    $home = new $controllerName();
+    $con = "\App\controller\\" . $controllerName;
+    //require __DIR__ . '/../app/controller/' . $controllerName . '.php';
+    
+    $home = new $con();
     $home->{$actionName}();
+
   }
 }
